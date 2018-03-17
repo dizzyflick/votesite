@@ -62,7 +62,7 @@ var app = new Vue({
   }, 
  methods: {
     addItem: function() {
-      axios.post("http://localhost:3000/api/items", {
+      axios.post("/api/items", {
 	text: this.text,
 	num: 0,
 	completed: false
@@ -75,14 +75,14 @@ var app = new Vue({
       });
     },
      getItems: function() {
-      axios.get("http://localhost:3000/api/items").then(response => {
+      axios.get("/api/items").then(response => {
         this.items = response.data;
         return true;
       }).catch(err => {
       });
     },
     completeItem: function(item) {
-      axios.put("http://localhost:3000/api/items/" + item.id, {
+      axios.put("/api/items/" + item.id, {
 	text: item.text,
 	num: num + 1,
 	completed: !item.completed,
@@ -93,7 +93,7 @@ var app = new Vue({
       });
     },
     voteItem: function(item) {
-      axios.put("http://localhost:3000/api/items/" + item.id, {
+      axios.put("/api/items/" + item.id, {
 	text: item.text,
 	num: item.num + 1,
       }).then(response => {
