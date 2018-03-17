@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>VOTE!</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+<nav>
+ <ul>
+  <li><a href="/index.html">NEW THINGS</a></li>
+  <li><a class="active" href="/pages/make.html">ADD THING</a></li>
+  <li><a href="/pages/view.html">LEADERBOARD</a></li>
+ </ul>
+</nav>
+
+<div class="container">
+
+<div class="add">
+  <p>Add the BEST THING!</p>
+<div id="app">
+      <form v-on:submit.prevent="addItem">
+        <input type="text" v-model="text">
+        <button type="submit">Add</button>
+      </form>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js" integrity="sha256-pU9euBaEcVl8Gtg+FRYCtin2vKLN8sx5/4npZDmY2VA=" crossorigin="anonymous"></script>
+<script src="/script.js"></script>
+</body>
+
+<footer>
+  <a href="https://github.com/dizzyflick/votesite">Github Link</a>
+</footer>
+
+</html>

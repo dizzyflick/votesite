@@ -1,0 +1,109 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+        "header header"
+        "main main"
+        "first second"
+        "footer footer";
+    grid-gap: 0;
+}
+
+body{
+   background-color: gray;
+   font-family: 'Dosis', sans-serif;
+   margin: 0;
+}
+
+section {
+  display: flex;
+}
+
+font-face {
+  <link href="https://fonts.googleapis.com/css?family=Dosis|Great+Vibes" rel="stylesheet">
+}
+
+p {
+   font-family: 'Dosis', sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+    text-align: center;
+}
+nav li {
+    display: inline-block;
+}
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    text-decoration: none;
+}
+
+nav li a:hover:not(.active) {
+    background-color: #9ed8c4;
+    color: white;
+}
+
+nav .active {
+   background-color: #65ab93;
+   color: white;
+}
+
+h1 {
+ grid-area: header;
+  font-family: 'Great Vibes', cursive;
+   font-size: 55px;
+   color: #fff;
+    text-align: center;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    padding: 0px 0px 0px 50px;
+}
+
+.first {
+    grid-area: first;
+}
+
+.second {
+    grid-area: second;
+}
+
+.main {
+    grid-area: main;
+    padding: 10px;
+    background-color: #9ed8c4;
+}
+
+.image img {
+   size: 100%;
+   position: relative;
+   max-width: 100%;
+}
+
+footer {
+ grid-area: footer;
+   display: block; 
+    background-color: black;
+    text-align: center;
+
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.staff img {
+    float: left;
+    max-width: 400px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>VOTE!</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+<nav>
+ <ul>
+  <li><a class="active" href="index.html">HOME</a></li>
+  <li><a href="/pages/make.html">ADD</a></li>
+  <li><a href="/pages/view.html">LEADERBOARD</a></li>
+ </ul>
+</nav>
+
+<div class="container">
+<div class="main">
+<div id="app">
+<div class="holder">
+	<div class="first">
+     <li v-for="item in randomItem" draggable="true" v-on:dragstart="dragItem(item)" v-on:dragover.prevent v-on:drop="dropItem(item)">
+	  <input type="checkbox"  v-on:click="voteItem(item)" /><label v-bind:class="{ completed: item.completed }">{{ item.text }}</label>
+	</li>
+	</div>
+	<div class="second">
+     <li v-for="item in randomItemz" draggable="true" v-on:dragstart="dragItem(item)" v-on:dragover.prevent v-on:drop="dropItem(item)">
+	  <input type="checkbox"  v-on:click="voteItem(item)" /><label v-bind:class="{ completed: item.completed }">{{ item.text }}</label>
+	</li>
+	</div>
+</div>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js" integrity="sha256-pU9euBaEcVl8Gtg+FRYCtin2vKLN8sx5/4npZDmY2VA=" crossorigin="anonymous"></script>
+<script src="/script.js"></script>
+</body>
+
+<footer>
+  <a href="https://github.com/dizzyflick/votesite">Github Link</a>
+</footer>
+
+</html>
